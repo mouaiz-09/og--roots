@@ -1,9 +1,9 @@
-
+import "./Style/Style.css"
 import './App.css';
 import OgRoots from './Projects/OgRoots';
 function App() {
   return (
-    <div className="App">
+    <div className="Og">
     <OgRoots/>
     </div>
   );
