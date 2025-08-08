@@ -6,7 +6,7 @@
 /*alexanderai*/
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -25,7 +25,7 @@ a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
-
+ /*navbar ======================================*/
 .NavBar {
   width: 100%;
   background-color: #050e18;
@@ -73,9 +73,102 @@ a {
     display: block !important;
   }
 }
-.MenuLinks{
-    position: absolute;
-    top: 40px;
-    right: 11px;
-    transition: all 0.5s ease-in-out;
+.MenuLinks {
+  position: absolute;
+  top: 40px;
+  right: 11px;
+  transition: all 0.5s ease-in-out;
+}
+
+/*Her Section ==========================================*/
+.Hero {
+ 
+  margin-top: 100px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.HeroContent {
+  width: 80%;
+  margin: auto;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.lOGO{
+
+  flex: 1 ;
+
+}
+.TextContetn{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding: 30px;
+}
+.Titel {
+  font-weight: 800 !important;
+  font-size: 55px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.NameOfBrand{
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+.BtnHero{
+  font-family: "Marhey", sans-serif !important;
+  font-optical-sizing: auto;
+  font-size: 20px !important;
+  font-weight: 500;
+  font-style: normal;
+  background: rgb(115, 58, 38) !important;  
+  padding: 10px 25px !important;
+  color: whitesmoke;
+  box-shadow: 0px 0px 15px rgb(8, 96, 131) !important;
+  margin-top: 15px !important;
+}
+.Description{
+  font-family: "Marhey", sans-serif !important;
+ 
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal
+}
+.Pup{
+  color: rgb(235, 6, 6);
+  font-size: 12px;
+  margin-top: 10px;
+  font-family: "Marhey", sans-serif !important;
+  font-optical-sizing: auto;
+
+  font-weight: 00;
+
+}
+.barns{
+  color: rgba(179, 89, 56, 0.877) !important;
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+@media only screen and (max-width: 768px) {
+
+  .HeroContent{
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .Titel{
+    font-size: 35px !important;
+    width: 100%;
+  }
 }

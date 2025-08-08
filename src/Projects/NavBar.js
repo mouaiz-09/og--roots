@@ -20,13 +20,13 @@ export default function NavBar(params) {
   return (
     <div className="NavBar">
       <div className="Logo">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <Avatar alt="Remy Sharp" src={logo} sx={{ width: 56, height: 56 }} />
+        <a href="#">
+          <Avatar alt="Og--Roots" src={logo} sx={{ width: 56, height: 56 }} />
         </a>
       </div>
 
       <Stack direction="row" spacing={2} className="Links">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="#Hero"  rel="noopener noreferrer">
           {" "}
           الصفحة الرئيسة
         </a>
@@ -50,7 +50,7 @@ export default function NavBar(params) {
           style={{ color: "whitesmoke" }}
         />
       </div>
-      {open ?(<MenuLinks />) : <></>}
+      {open ? <MenuLinks /> : <></>}
     </div>
   );
 }
