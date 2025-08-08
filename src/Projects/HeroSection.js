@@ -2,8 +2,9 @@ import { Avatar, Button } from "@mui/material";
 import "../Style/Style.css";
 import logo from "../Img/logo.jpg";
 export default function HeroSection() {
+ 
   return (
-    <div className="Hero" id="Hero">
+    <div className="Hero" id="Hero" data-aos="flip-left">
       <div className="HeroContent">
         <div className="lOGO">
           <Avatar
@@ -26,10 +27,10 @@ export default function HeroSection() {
             </h1>
           </div>
           <p className="Description" dir="rtl">
-            مرحبا بيك في <b className="barns">OG–Roots</b>، وين تلقى كوليكسيون تاع حوايج محدودين
-            بزاف. كل تيشرت ولا سترة نخدموها، راهي بإصدار خاص وما تعاودش تلقاها،
-            باش تكون ديما مميز وراسك مرفوع. هنا، ستايلك هو اللي يحكي عليك قبل ما
-            تهدر.
+            مرحبا بيك في <b className="barns">OG–Roots</b>، وين تلقى كوليكسيون
+            تاع حوايج محدودين بزاف. كل تيشرت ولا سترة نخدموها، راهي بإصدار خاص
+            وما تعاودش تلقاها، باش تكون ديما مميز وراسك مرفوع. هنا، ستايلك هو
+            اللي يحكي عليك قبل ما تهدر.
           </p>
           <div
             style={{
@@ -41,12 +42,13 @@ export default function HeroSection() {
             }}
           >
             <Button variant="contained" className="BtnHero">
-              أحجز قبل ما تفوتك
+              ✅ أحجز قبل ما تفوتك
             </Button>
             <span className="Pup">"عدد محدود جداً-القطع تروح بالخف"</span>
           </div>
         </div>
       </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </div>
   );
 }

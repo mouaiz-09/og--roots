@@ -26,11 +26,11 @@ export default function NavBar(params) {
       </div>
 
       <Stack direction="row" spacing={2} className="Links">
-        <a href="#Hero"  rel="noopener noreferrer">
+        <a href="#Hero" rel="noopener noreferrer">
           {" "}
           الصفحة الرئيسة
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="#Prodacts"  rel="noopener noreferrer">
           {" "}
           المنتجات
         </a>

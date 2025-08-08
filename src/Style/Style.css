@@ -1,6 +1,6 @@
 .Og {
   width: 100%;
-  height: 100vh;
+
   background-color: rgb(7, 19, 31);
 }
 /*alexanderai*/
@@ -25,7 +25,7 @@ a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
- /*navbar ======================================*/
+/*navbar ======================================*/
 .NavBar {
   width: 100%;
   background-color: #050e18;
@@ -82,9 +82,8 @@ a {
 
 /*Her Section ==========================================*/
 .Hero {
- 
-  margin-top: 100px;
-  height: 70vh;
+  margin-top: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,12 +98,10 @@ a {
   align-items: center;
   flex-direction: row-reverse;
 }
-.lOGO{
-
-  flex: 1 ;
-
+.lOGO {
+  flex: 1;
 }
-.TextContetn{
+.TextContetn {
   flex: 3;
   display: flex;
   justify-content: center;
@@ -117,58 +114,161 @@ a {
   font-weight: 800 !important;
   font-size: 55px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-.NameOfBrand{
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.NameOfBrand {
   font-family: "Pacifico", cursive;
   font-weight: 800;
   font-style: normal;
-
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
-.BtnHero{
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+.BtnHero {
   font-family: "Marhey", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 20px !important;
   font-weight: 500;
   font-style: normal;
-  background: rgb(115, 58, 38) !important;  
+  background: #057988c5 !important;
   padding: 10px 25px !important;
   color: whitesmoke;
   box-shadow: 0px 0px 15px rgb(8, 96, 131) !important;
   margin-top: 15px !important;
 }
-.Description{
+.Description {
   font-family: "Marhey", sans-serif !important;
- 
+
   font-size: 20px;
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
 }
-.Pup{
+.Pup {
   color: rgb(235, 6, 6);
   font-size: 12px;
   margin-top: 10px;
   font-family: "Marhey", sans-serif !important;
   font-optical-sizing: auto;
-
-  font-weight: 00;
-
 }
-.barns{
-  color: rgba(179, 89, 56, 0.877) !important;
+.barns {
+ color: rgba(179, 89, 56, 0.877) !important;
   font-family: "Pacifico", cursive;
   font-weight: 800;
   font-style: normal;
+ 
 }
 @media only screen and (max-width: 768px) {
-
-  .HeroContent{
+  .HeroContent {
     flex-direction: column !important;
     width: 100% !important;
+    height: 100vh;
+    margin-top: 100px !important;
   }
-  .Titel{
+  .Titel {
     font-size: 35px !important;
     width: 100%;
   }
+}
+/*Prodacts==============================*/
+.Prodacts {
+  width: 100%;
+}
+.ProdactsContanet {
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+
+  border-radius: 20px;
+  color: whitesmoke;
+  gap: 30px;
+}
+.Bodya {
+  background-color: #05213f75;
+  width: 90% !important;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px #057988c5;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .Prodacts {
+    height: 0vh !important;
+
+    margin-top: 170px;
+  }
+  .Bodya {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .CardActions {
+    display: flex;
+    justify-content: center;
+  }
+  .BtnCard {
+    font-size: 15px !important;
+    font-weight: 400;
+  }
+  .CardTitel {
+    font-size: 23px !important;
+    font-weight: 500;
+  }
+}
+.BtnCard {
+  font-family: "Marhey", sans-serif !important;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+.CardTitel {
+  font-family: "Pacifico", cursive !important;
+  font-weight: 500 !important;
+}
+
+/*about ================================*/
+.About {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+  color: whitesmoke;
+  flex-shrink: 1;
+  
+}
+.AboutContetnt{
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.AboutContetnt h1 , .Top h1{
+  font-family: "Marhey", sans-serif !important;
+  font-optical-sizing: auto;
+  font-size: 50px !important;
+  font-weight: 500;
+}
+.AboutContetnt p{
+  direction: rtl
+}
+
+@media only screen and (max-width: 768px){
+  .About{
+    margin-top: 1000px !important;
+  }.AboutContetnt h1 , .Top h1{
+    font-size: 35px !important;
+  }
+}
+.lim{
+
+  font-family: "Pacifico", cursive !important;
+  font-weight: 500 !important;
+  color: red;
+  font-size: large;
+  font-weight: 200 !important;
 }
