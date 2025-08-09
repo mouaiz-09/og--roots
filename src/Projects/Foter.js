@@ -1,6 +1,6 @@
-import { Avatar, Button, Link } from "@mui/material";
+import { Avatar, Link } from "@mui/material";
 import logo from "../Img/logo.jpg";
-import { WatchSharp } from "@mui/icons-material";
+import {  Instagram } from "@mui/icons-material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Foter() {
@@ -14,10 +14,18 @@ export default function Foter() {
           <div className="Bt">
             <Link onClick={() => window.open(url, "_blank")} underline="none">
               <WhatsAppIcon color="success" />
+              <Instagram
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/ogroots_off/",
+                    "_blank"
+                  )
+                }
+              />
             </Link>
           </div>
 
-          <di className="Mouaiz" >
+          <di className="Mouaiz">
             <p>2025@OgRoots</p>
 
             <a

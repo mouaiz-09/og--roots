@@ -3,6 +3,12 @@
 
   background-color: rgb(7, 19, 31);
 }
+
+
+html {
+  scroll-behavior: smooth;
+  transition: 1.5s ease-in-out
+}
 /*alexanderai*/
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 

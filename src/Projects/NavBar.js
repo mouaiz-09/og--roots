@@ -35,11 +35,11 @@ export default function NavBar(params) {
           {" "}
           المنتجات
         </a>
-        <a href="#about" target="_blank" rel="noopener noreferrer">
+        <a href="#about"  rel="noopener noreferrer">
           {" "}
           نحن
         </a>
-        <a href="#contacte" target="_blank" rel="noopener noreferrer">
+        <a href="#contacte" rel="noopener noreferrer">
           {" "}
           تواصل معنا
         </a>
