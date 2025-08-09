@@ -17,8 +17,15 @@ export default function Foter() {
             </Link>
           </div>
 
-          <di className="Mouaiz">
+          <di className="Mouaiz" >
             <p>2025@OgRoots</p>
+
+            <a
+              href="https://www.instagram.com/abd_elmouaiz_10/"
+              rel="noopener noreferrer"
+            >
+              by:Mouaiz
+            </a>
           </di>
 
           <div className="logoFoter">

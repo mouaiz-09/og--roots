@@ -338,6 +338,12 @@ a {
   font-family: "Pacifico", cursive;
   font-weight: 800;
   font-style: normal;
+  text-align: center;
+}
+.Mouaiz a{
+  font-size: 10px;
+  color: rgba(192, 196, 196, 0.829);
+  margin: 0px;
 }
 
 @media only screen and (max-width: 768px) {

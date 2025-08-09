@@ -43,7 +43,7 @@ export default function MenuLinks() {
         المنتجات
       </Button>
     </a>,
-    <a href="#about" target="_blank" rel="noopener noreferrer">
+    <a href="#about"  rel="noopener noreferrer">
       <Button
         sx={{
           background: Statue === "نحن" ? "rgb(6, 24, 124)" : "",
@@ -57,7 +57,7 @@ export default function MenuLinks() {
         نحن
       </Button>
     </a>,
-    <a href="#contacte" target="_blank" rel="noopener noreferrer">
+    <a href="#contacte"  rel="noopener noreferrer">
       <Button
         sx={{
           background: Statue === "تواصل معنا" ? "rgb(6, 24, 124)" : "",

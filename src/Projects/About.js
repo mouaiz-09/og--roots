@@ -1,8 +1,8 @@
 import  "../Style/Style.css"
 export default function About(params) {
     return (
-      <div className="About">
-        <div className="AboutContetnt" id="about">
+      <div className="About" id="about">
+        <div className="AboutContetnt">
           <h1>🫣​شكون حنا</h1>
           <p>
             <b className="barns">OG–Roots</b> براند شبابية جزايرية نخدمو غير
