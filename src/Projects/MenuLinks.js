@@ -14,54 +14,63 @@ export default function MenuLinks() {
     SetStatue(Vlue);
   }
   const buttons = [
-    <Button
-      sx={{
-        background: Statue === "الصفحة الرئيسة" ? "rgb(6, 24, 124)" : "",
-      }}
-      onClick={() => {
-        Change("الصفحة الرئيسة");
-      }}
-      style={{ fontFamily: "Alexandria" }}
-      key="one"
-    >
-      الصفحة الرئيسة
-    </Button>,
-    <Button
-      sx={{
-        background: Statue === "المنتجات" ? "rgb(6, 24, 124)" : "",
-      }}
-      onClick={() => {
-        Change("المنتجات");
-      }}
-      style={{ fontFamily: "Alexandria" }}
-      key="two"
-    >
-      المنتجات
-    </Button>,
-    <Button
-      sx={{
-        background: Statue === "نحن" ? "rgb(6, 24, 124)" : "",
-      }}
-      onClick={() => {
-        Change("نحن");
-      }}
-      style={{ fontFamily: "Alexandria" }}
-      key="three"
-    >
-      نحن
-    </Button>,
-    <Button
-      sx={{
-        background: Statue === "تواصل معنا" ? "rgb(6, 24, 124)" : "",
-      }}
-      onClick={() => {
-        Change("تواصل معنا");
-      }}
-      style={{ fontFamily: "Alexandria" }}
-      key="three"
-    >
-      تواصل معنا
-    </Button>,
+    <a href="#Hero" rel="noopener noreferrer">
+      {" "}
+      <Button
+        sx={{
+          background: Statue === "الصفحة الرئيسة" ? "rgb(6, 24, 124)" : "",
+        }}
+        onClick={() => {
+          Change("الصفحة الرئيسة");
+        }}
+        style={{ fontFamily: "Alexandria" }}
+        key="one"
+      >
+        الصفحة الرئيسة
+      </Button>
+    </a>,
+    <a href="#Prodacts" rel="noopener noreferrer">
+      <Button
+        sx={{
+          background: Statue === "المنتجات" ? "rgb(6, 24, 124)" : "",
+        }}
+        onClick={() => {
+          Change("المنتجات");
+        }}
+        style={{ fontFamily: "Alexandria" }}
+        key="two"
+      >
+        المنتجات
+      </Button>
+    </a>,
+    <a href="#about" target="_blank" rel="noopener noreferrer">
+      <Button
+        sx={{
+          background: Statue === "نحن" ? "rgb(6, 24, 124)" : "",
+        }}
+        onClick={() => {
+          Change("نحن");
+        }}
+        style={{ fontFamily: "Alexandria" }}
+        key="three"
+      >
+        نحن
+      </Button>
+    </a>,
+    <a href="#contacte" target="_blank" rel="noopener noreferrer">
+      <Button
+        sx={{
+          background: Statue === "تواصل معنا" ? "rgb(6, 24, 124)" : "",
+        }}
+        onClick={() => {
+          Change("تواصل معنا");
+        }}
+        style={{ fontFamily: "Alexandria" }}
+        key="three"
+      >
+        تواصل معنا
+      </Button>{" "}
+    </a>,
   ];
   return (
     <Box
@@ -83,6 +92,7 @@ export default function MenuLinks() {
           orientation="vertical"
           aria-label="Vertical button group"
           variant="contained"
+          className="btngroupa"
         >
           {buttons}
         </ButtonGroup>

@@ -5,6 +5,7 @@ import MenuLinks from "./MenuLinks";
 //icons==================
 import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
+import { Link } from "@mui/material";
 //========================
 export default function NavBar(params) {
   //state open menu
@@ -20,9 +21,9 @@ export default function NavBar(params) {
   return (
     <div className="NavBar">
       <div className="Logo">
-        <a href="#">
+        <Link height="#" >
           <Avatar alt="Og--Roots" src={logo} sx={{ width: 56, height: 56 }} />
-        </a>
+        </Link>
       </div>
 
       <Stack direction="row" spacing={2} className="Links">
@@ -34,11 +35,11 @@ export default function NavBar(params) {
           {" "}
           المنتجات
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="#about" target="_blank" rel="noopener noreferrer">
           {" "}
           نحن
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="#contacte" target="_blank" rel="noopener noreferrer">
           {" "}
           تواصل معنا
         </a>

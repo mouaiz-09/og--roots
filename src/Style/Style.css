@@ -17,7 +17,6 @@
   font-style: normal;
 }
 body {
-  height: 300vh;
   background-color: rgb(7, 19, 31);
 }
 a {
@@ -78,6 +77,9 @@ a {
   top: 40px;
   right: 11px;
   transition: all 0.5s ease-in-out;
+}
+.btngroupa {
+  box-shadow: 0px 0px 20px rgba(3, 133, 133, 0.973) !important;
 }
 
 /*Her Section ==========================================*/
@@ -149,11 +151,10 @@ a {
   font-optical-sizing: auto;
 }
 .barns {
- color: rgba(179, 89, 56, 0.877) !important;
+  color: rgba(179, 89, 56, 0.877) !important;
   font-family: "Pacifico", cursive;
   font-weight: 800;
   font-style: normal;
- 
 }
 @media only screen and (max-width: 768px) {
   .HeroContent {
@@ -236,9 +237,8 @@ a {
   text-align: center;
   color: whitesmoke;
   flex-shrink: 1;
-  
 }
-.AboutContetnt{
+.AboutContetnt {
   width: 90%;
   padding: 20px;
   display: flex;
@@ -247,28 +247,104 @@ a {
   flex-direction: column;
   gap: 10px;
 }
-.AboutContetnt h1 , .Top h1{
+.AboutContetnt h1,
+.Top h1 {
   font-family: "Marhey", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 50px !important;
   font-weight: 500;
 }
-.AboutContetnt p{
-  direction: rtl
+.AboutContetnt p {
+  direction: rtl;
 }
 
-@media only screen and (max-width: 768px){
-  .About{
+@media only screen and (max-width: 768px) {
+  .About {
     margin-top: 1000px !important;
-  }.AboutContetnt h1 , .Top h1{
+  }
+  .AboutContetnt h1,
+  .Top h1 {
     font-size: 35px !important;
   }
 }
-.lim{
-
+.lim {
   font-family: "Pacifico", cursive !important;
   font-weight: 500 !important;
   color: red;
   font-size: large;
   font-weight: 200 !important;
+}
+/*Conact=======================*/
+.Conatct {
+  width: 100%;
+  margin-top: 40px;
+}
+.ConatctContenet {
+  width: 80% !important;
+  margin: auto;
+  color: antiquewhite;
+
+  text-align: center;
+}
+
+.Top {
+  font-family: "Marhey", sans-serif !important;
+  font-optical-sizing: auto;
+  font-size: 50px;
+  font-weight: 500;
+}
+.ConatctContenet .Body {
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .Top {
+    font-size: 30px !important;
+  }
+}
+
+/*Foter============================*/
+/*form response end*/
+/*foter response start*/
+.foter {
+  width: 100%;
+  background-color: #050e18;
+  margin-top: 70px;
+  box-shadow: 0px 0px 20px aqua;
+  padding: 5px 10px;
+}
+
+.fotereContetn {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: row !important;
+}
+
+.foter .links-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+}
+.Mouaiz {
+  color: whitesmoke;
+  color: rgba(179, 89, 56, 0.877) !important;
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .fotereContetn {
+    width: 100% !important;
+  }
+  .Bt .BtnCard {
+    font-size: 15px !important;
+  }
 }

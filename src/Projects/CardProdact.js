@@ -12,6 +12,9 @@ export default function CardProdact({
   prace = "404",
   src = "https://m.media-amazon.com/images/I/719aat+IRzS._AC_SL1500_.jpg",
 }) {
+  const phone = "213562260041";
+  const message = "og--roots slam"; // الرسالة الجاهزة
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   return (
     <Card sx={{ maxWidth: 345, textAlign: "center" }}>
       <CardMedia
@@ -39,7 +42,7 @@ export default function CardProdact({
         </Typography>
       </CardContent>
       <CardActions className="CardActions">
-        <Link href="tel:+213 656393011" underline="none">
+        <Link  onClick={() => window.open(url, "_blank")} underline="none">
           <Button
             variant="contained"
             color="success"

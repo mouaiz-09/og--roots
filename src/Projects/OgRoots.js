@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
 import Proadcts from "./Proadcts";
 import About from "./About";
+import Conacte from "./Conacte";
+import Foter from "./Foter";
 export default function OgRoots(params) {
   return (
     <div style={{ display: "block" }}>
@@ -11,6 +13,9 @@ export default function OgRoots(params) {
       <HeroSection />
       <Proadcts />
       <About />
-    </div>
+      <Conacte />
+      <Foter/>
+     
+  </div>
   );
 }

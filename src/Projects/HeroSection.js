@@ -41,9 +41,11 @@ export default function HeroSection() {
               gap: "px",
             }}
           >
-            <Button variant="contained" className="BtnHero">
-              ✅ أحجز قبل ما تفوتك
-            </Button>
+            <a href="#Prodacts" rel="noopener noreferrer">
+              <Button variant="contained" className="BtnHero">
+                ✅ أحجز قبل ما تفوتك
+              </Button>
+            </a>
             <span className="Pup">"عدد محدود جداً-القطع تروح بالخف"</span>
           </div>
         </div>
