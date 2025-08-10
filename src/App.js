@@ -1,17 +1,28 @@
 import "./Style/Style.css";
 import "./App.css";
 import OgRoots from "./Projects/OgRoots";
-import { brown } from "@mui/material/colors";
+import {  Routes, Route } from "react-router-dom";
+import AddProductForm from "./Projects/Admin";
 function App() {
   return (
-    <div
-      className="Og"
-      style={{
-        background: brown["900"],
-      }}
-    >
-      <OgRoots />
-    </div>
+    <>
+     
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div
+                className="Og"
+               
+              >
+                <OgRoots />
+              </div>
+            }
+          />
+          <Route path="/admin" element={<AddProductForm/>} />
+        </Routes>
+    
+    </>
   );
 }
 

@@ -39,6 +39,7 @@ export default function CardProdact({
           variant="body"
           color="warning"
           sx={{ color: "text.secondary" }}
+          className="Prix"
         >
           {prace}
         </Typography>

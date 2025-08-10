@@ -17,6 +17,7 @@ export default function MenuLinks() {
     <a href="#Hero" rel="noopener noreferrer">
       {" "}
       <Button
+        className="BtnLink"
         sx={{
           background: Statue === "الصفحة الرئيسة" ? "rgb(6, 24, 124)" : "",
         }}
@@ -31,6 +32,7 @@ export default function MenuLinks() {
     </a>,
     <a href="#Prodacts" rel="noopener noreferrer">
       <Button
+        className="BtnLink"
         sx={{
           background: Statue === "المنتجات" ? "rgb(6, 24, 124)" : "",
         }}
@@ -43,8 +45,9 @@ export default function MenuLinks() {
         المنتجات
       </Button>
     </a>,
-    <a href="#about"  rel="noopener noreferrer">
+    <a href="#about" rel="noopener noreferrer">
       <Button
+        className="BtnLink"
         sx={{
           background: Statue === "نحن" ? "rgb(6, 24, 124)" : "",
         }}
@@ -57,8 +60,9 @@ export default function MenuLinks() {
         نحن
       </Button>
     </a>,
-    <a href="#contacte"  rel="noopener noreferrer">
+    <a href="#contacte" rel="noopener noreferrer">
       <Button
+        className="BtnLink"
         sx={{
           background: Statue === "تواصل معنا" ? "rgb(6, 24, 124)" : "",
         }}
@@ -83,16 +87,21 @@ export default function MenuLinks() {
           m: 1,
           width: 138,
           height: 110,
+         
         },
       }}
     >
-      <Paper>
+      <Paper >
         <ButtonGroup
           fullWidth
           orientation="vertical"
           aria-label="Vertical button group"
           variant="contained"
+          color="success"
           className="btngroupa"
+          style={{
+            background: "burlywood ",
+          }}
         >
           {buttons}
         </ButtonGroup>

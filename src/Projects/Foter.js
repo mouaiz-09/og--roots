@@ -27,7 +27,7 @@ export default function Foter() {
           </div>
 
           <di className="Mouaiz">
-            <p>2025@OgRoots</p>
+            <span>2025@OgRoots</span>
 
             <a
               href="https://www.instagram.com/abd_elmouaiz_10/"

@@ -1,9 +1,18 @@
 .Og {
   width: 100%;
+  background-image: url("../Img/Phoneackground.png") !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
 }
 @font-face {
   font-family: ArabicFont;
-  src: url("../alfont_com_AlFont_com_Frutiger-LT-Arabic-65-Bold-1.ttf");
+  src: url("../Fonts/alfont_com_AlFont_com_Frutiger-LT-Arabic-65-Bold-1.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: FranchFont;
+  src: url("../Fonts/orbitron-black.ttf");
   font-weight: 500;
 }
 html {
@@ -11,7 +20,12 @@ html {
   transition: 1.5s ease-in-out;
 }
 /*alexanderai*/
-
+body {
+  background-image: url("../Img/Phoneackground.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
 * {
   padding: 0;
   margin: 0;
@@ -81,9 +95,10 @@ a {
   top: 40px;
   right: 11px;
   transition: all 0.5s ease-in-out;
+ 
 }
 .btngroupa {
-  box-shadow: 0px 0px 20px rgba(3, 133, 133, 0.973) !important;
+  box-shadow: 0px 0px 20px burlywood !important;
   font-family: "ArabicFont" !important;
 }
 
@@ -114,7 +129,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   flex-direction: column;
   padding: 30px;
 }
@@ -122,15 +137,20 @@ a {
   font-weight: 800 !important;
   font-size: 55px;
   direction: ltr;
+  text-align: end !important;
 }
 
 .NameOfBrand {
-  font-family: "Lemon", serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "FranchFont", cursive;
+  font-weight: 700 !important;
+  color: burlywood;
+  font-size: 45px !important ;
+}
+.BtnLink {
+  font-family: "ArabicFont", sans-serif !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 .BtnHero {
   font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
@@ -143,12 +163,15 @@ a {
   box-shadow: 0px 0px 15px rgb(123, 125, 126) !important;
   margin-top: 15px !important;
 }
+
 .Description {
   font-family: "ArabicFont", sans-serif !important;
-
-  font-size: 20px;
+  text-align: center;
+  font-size: 30px;
   font-weight: 400;
   font-style: normal;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .Pup {
   color: rgb(235, 6, 6);
@@ -158,24 +181,27 @@ a {
   font-optical-sizing: auto;
 }
 .barns {
-  font-family: "Lemon", serif;
-
+  font-family: "FranchFont", serif;
   font-weight: 400 !important;
   color: burlywood;
   font-size: medium;
 }
 @media only screen and (max-width: 768px) {
-  .Hero{
+  .Hero {
     height: auto !important;
+  }
+  .NameOfBrand {
+    font-size: large !important;
+    font-weight: 800 !important;
   }
   .HeroContent {
     flex-direction: column !important;
     width: 100% !important;
-   
+
     margin-top: 100px !important;
   }
   .Titel {
-    font-size: 25px !important;
+    font-size: 35px !important;
     width: 100%;
     font-family: "ArabicFont" !important;
   }
@@ -199,21 +225,18 @@ a {
   gap: 30px;
 }
 .Bodya {
- 
   width: 90% !important;
   border-radius: 8px;
   box-shadow: 0px 0px 20px #7c7e7ec5;
   margin: auto;
   color: black !important;
 }
-.ImgeProdact{
+.ImgeProdact {
   width: 110px !important;
- margin: auto!important;
- margin-top: 10px !important;
- border-radius: 10px !important;
+  margin: auto !important;
+  margin-top: 10px !important;
+  border-radius: 10px !important;
 }
-
-
 
 @media only screen and (max-width: 768px) {
   .Prodacts {
@@ -245,10 +268,14 @@ a {
   font-weight: 500;
 }
 .CardTitel {
-  font-family: "Lemon", serif !important;
-  font-weight: 500 !important;
   font-style: normal;
-
+  font-family: "FranchFont", cursive !important;
+  font-weight: 500 !important;
+  color: black !important;
+}
+.Prix {
+  font-family: "FranchFont", serif;
+  font-weight: 400 !important;
 }
 
 /*about ================================*/
@@ -292,12 +319,10 @@ a {
   }
 }
 .lim {
-  font-family: "Lemon", serif;
-
+  font-family: "FranchFont", serif;
   font-weight: 400 !important;
   color: burlywood;
   font-size: medium;
-
 }
 /*Conact=======================*/
 .Conatct {
@@ -359,19 +384,28 @@ a {
   background-color: red;
 }
 .Mouaiz {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: burlywood;
-  font-family: "Lemon", serif;
-
   font-weight: 700 !important;
-  font-size: medium;
+  font-size: 20px !important;
+  padding: 0px;
+  margin: 0 !important;
 }
 .Mouaiz a {
-  font-family: "Lemon", serif;
-
-  font-weight: 400 !important;
+  font-family: serif !important;
+  font-weight: 100 !important;
   color: burlywood;
-  font-size: smaller;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0 !important;
+}
+.BtnLink {
+  background-color: burlywood !important;
+}
+.btngroupa {
+  background-color: burlywood !important;
 }
 
 @media only screen and (max-width: 768px) {

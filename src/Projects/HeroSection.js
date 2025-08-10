@@ -28,7 +28,7 @@ export default function HeroSection() {
             }}
           >
             <h1 className="Titel">
-              <b className="NameOfBrand">OG--Roots</b>
+              <span className="NameOfBrand">OG--Roots </span>
               مرحبا بيك في
             </h1>
           </div>
