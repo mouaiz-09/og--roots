@@ -3,7 +3,7 @@ export default function About(params) {
     return (
       <div className="About" id="about">
         <div className="AboutContetnt">
-          <h1>🫣​شكون حنا</h1>
+          <h1>​شكون حنا</h1>
           <p>
             <b className="barns">OG–Roots</b> براند شبابية جزايرية نخدمو غير
             <b className="lim">limited clothes</b> ، قطع قليلة ومميزة باش كل

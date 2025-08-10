@@ -13,8 +13,9 @@ export default function Foter() {
         <div className="fotereContetn">
           <div className="Bt">
             <Link onClick={() => window.open(url, "_blank")} underline="none">
-              <WhatsAppIcon color="success" />
+              <WhatsAppIcon style={{ color: "burlywood" }} />
               <Instagram
+                style={{ color: "burlywood" }}
                 onClick={() =>
                   window.open(
                     "https://www.instagram.com/ogroots_off/",

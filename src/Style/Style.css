@@ -1,30 +1,27 @@
 .Og {
   width: 100%;
-
-  background-color: rgb(7, 19, 31);
 }
-
-
+@font-face {
+  font-family: ArabicFont;
+  src: url("../alfont_com_AlFont_com_Frutiger-LT-Arabic-65-Bold-1.ttf");
+  font-weight: 500;
+}
 html {
   scroll-behavior: smooth;
-  transition: 1.5s ease-in-out
+  transition: 1.5s ease-in-out;
 }
 /*alexanderai*/
-@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box !important;
-  font-family: "Alexandria", sans-serif;
+  font-family: "ArabicFont", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
-body {
-  background-color: rgb(7, 19, 31);
-}
+
 a {
   color: whitesmoke;
   text-decoration: none;
@@ -33,7 +30,7 @@ a {
 /*navbar ======================================*/
 .NavBar {
   width: 100%;
-  background-color: #050e18;
+  background-color: #3f2922;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +40,7 @@ a {
   top: 0;
   right: 0;
   z-index: 100;
+  box-shadow: 0px 0px 10px burlywood;
 }
 .Logo {
   flex: 1;
@@ -86,6 +84,7 @@ a {
 }
 .btngroupa {
   box-shadow: 0px 0px 20px rgba(3, 133, 133, 0.973) !important;
+  font-family: "ArabicFont" !important;
 }
 
 /*Her Section ==========================================*/
@@ -96,6 +95,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: "ArabicFont" !important;
 }
 .HeroContent {
   width: 80%;
@@ -121,29 +121,30 @@ a {
 .Titel {
   font-weight: 800 !important;
   font-size: 55px;
+  direction: ltr;
 }
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 .NameOfBrand {
-  font-family: "Pacifico", cursive;
-  font-weight: 800;
+  font-family: "Lemon", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 .BtnHero {
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 20px !important;
   font-weight: 500;
   font-style: normal;
-  background: #057988c5 !important;
+  background: burlywood !important;
   padding: 10px 25px !important;
   color: whitesmoke;
-  box-shadow: 0px 0px 15px rgb(8, 96, 131) !important;
+  box-shadow: 0px 0px 15px rgb(123, 125, 126) !important;
   margin-top: 15px !important;
 }
 .Description {
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
 
   font-size: 20px;
   font-weight: 400;
@@ -153,25 +154,30 @@ a {
   color: rgb(235, 6, 6);
   font-size: 12px;
   margin-top: 10px;
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
 }
 .barns {
-  color: rgba(179, 89, 56, 0.877) !important;
-  font-family: "Pacifico", cursive;
-  font-weight: 800;
-  font-style: normal;
+  font-family: "Lemon", serif;
+
+  font-weight: 400 !important;
+  color: burlywood;
+  font-size: medium;
 }
 @media only screen and (max-width: 768px) {
+  .Hero{
+    height: auto !important;
+  }
   .HeroContent {
     flex-direction: column !important;
     width: 100% !important;
-    height: 100vh;
+   
     margin-top: 100px !important;
   }
   .Titel {
-    font-size: 35px !important;
+    font-size: 25px !important;
     width: 100%;
+    font-family: "ArabicFont" !important;
   }
 }
 /*Prodacts==============================*/
@@ -193,12 +199,22 @@ a {
   gap: 30px;
 }
 .Bodya {
-  background-color: #05213f75;
+ 
   width: 90% !important;
   border-radius: 8px;
-  box-shadow: 0px 0px 20px #057988c5;
+  box-shadow: 0px 0px 20px #7c7e7ec5;
   margin: auto;
+  color: black !important;
 }
+.ImgeProdact{
+  width: 110px !important;
+ margin: auto!important;
+ margin-top: 10px !important;
+ border-radius: 10px !important;
+}
+
+
+
 @media only screen and (max-width: 768px) {
   .Prodacts {
     height: 0vh !important;
@@ -223,14 +239,16 @@ a {
   }
 }
 .BtnCard {
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 20px;
   font-weight: 500;
 }
 .CardTitel {
-  font-family: "Pacifico", cursive !important;
+  font-family: "Lemon", serif !important;
   font-weight: 500 !important;
+  font-style: normal;
+
 }
 
 /*about ================================*/
@@ -255,10 +273,10 @@ a {
 }
 .AboutContetnt h1,
 .Top h1 {
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 50px !important;
-  font-weight: 500;
+  font-weight: 700;
 }
 .AboutContetnt p {
   direction: rtl;
@@ -274,11 +292,12 @@ a {
   }
 }
 .lim {
-  font-family: "Pacifico", cursive !important;
-  font-weight: 500 !important;
-  color: red;
-  font-size: large;
-  font-weight: 200 !important;
+  font-family: "Lemon", serif;
+
+  font-weight: 400 !important;
+  color: burlywood;
+  font-size: medium;
+
 }
 /*Conact=======================*/
 .Conatct {
@@ -294,7 +313,7 @@ a {
 }
 
 .Top {
-  font-family: "Marhey", sans-serif !important;
+  font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
   font-size: 50px;
   font-weight: 500;
@@ -307,6 +326,7 @@ a {
 @media only screen and (max-width: 768px) {
   .Top {
     font-size: 30px !important;
+    font-weight: 700;
   }
 }
 
@@ -317,7 +337,7 @@ a {
   width: 100%;
   background-color: #050e18;
   margin-top: 70px;
-  box-shadow: 0px 0px 20px aqua;
+  box-shadow: 0px 0px 30px burlywood;
   padding: 5px 10px;
 }
 
@@ -339,17 +359,19 @@ a {
   background-color: red;
 }
 .Mouaiz {
-  color: whitesmoke;
-  color: rgba(179, 89, 56, 0.877) !important;
-  font-family: "Pacifico", cursive;
-  font-weight: 800;
-  font-style: normal;
   text-align: center;
+  color: burlywood;
+  font-family: "Lemon", serif;
+
+  font-weight: 700 !important;
+  font-size: medium;
 }
-.Mouaiz a{
-  font-size: 10px;
-  color: rgba(192, 196, 196, 0.829);
-  margin: 0px;
+.Mouaiz a {
+  font-family: "Lemon", serif;
+
+  font-weight: 400 !important;
+  color: burlywood;
+  font-size: smaller;
 }
 
 @media only screen and (max-width: 768px) {

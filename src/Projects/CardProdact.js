@@ -7,22 +7,24 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 export default function CardProdact({
   Titel = "erro",
   prace = "404",
   src = "https://m.media-amazon.com/images/I/719aat+IRzS._AC_SL1500_.jpg",
 }) {
+
   const phone = "213562260041";
   const message = "og--roots slam"; // الرسالة الجاهزة
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   return (
-    <Card sx={{ maxWidth: 345, textAlign: "center" }}>
+    <Card sx={{ maxWidth: 345, textAlign: "center", background: "burlywood" }}>
       <CardMedia
         component="img"
         alt={Titel}
         height
         image={src}
-        style={{ padding: "10px" }}
+        className="ImgeProdact"
       />
       <CardContent>
         <Typography
@@ -42,7 +44,7 @@ export default function CardProdact({
         </Typography>
       </CardContent>
       <CardActions className="CardActions">
-        <Link  onClick={() => window.open(url, "_blank")} underline="none">
+        <Link onClick={() => window.open(url, "_blank")} underline="none">
           <Button
             variant="contained"
             color="success"

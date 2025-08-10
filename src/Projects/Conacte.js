@@ -11,7 +11,7 @@ export default function Conacte() {
   return (
     <div className="Conatct" id="contacte">
       <div className="ConatctContenet" id="contacte">
-        <h1 className="Top"> 😇تابعنا باه تعرف غير الجديد</h1>
+        <h1 className="Top"> تابعنا باه تعرف غير الجديد</h1>
         <Stack className="Body" direction="row" spacing={2}>
           <Link href="#" underline="none">
             <Avatar src={Instgram} style={{ width: "auto", height: 56 }} />

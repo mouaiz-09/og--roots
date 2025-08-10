@@ -15,7 +15,7 @@ export default function Proadcts(params) {
     <div className="Prodacts" id="Prodacts">
       <div className="ProdactsContanet">
         <div className="Top">
-          <h1>🫠​منتجاتنا</h1>
+          <h1>​منتجاتنا</h1>
         </div>
         <div className="Bodya">
           {/*==================Grid ============== */}
