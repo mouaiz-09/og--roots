@@ -13,7 +13,7 @@ export default function Conacte() {
       <div className="ConatctContenet" id="contacte">
         <h1 className="Top"> تابعنا باه تعرف غير الجديد</h1>
         <Stack className="Body" direction="row" spacing={2}>
-          <Link href="#" underline="none">
+          <Link href="https://www.instagram.com/ogroots_off/" underline="none">
             <Avatar src={Instgram} style={{ width: "auto", height: 56 }} />
           </Link>
           <Avatar
