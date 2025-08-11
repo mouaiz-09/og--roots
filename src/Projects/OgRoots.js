@@ -7,7 +7,7 @@ import About from "./About";
 import Conacte from "./Conacte";
 import Foter from "./Foter";
 
-import { ThemeProvider, THEME_ID, createTheme } from "@mui/material/styles";
+import { ThemeProvider,  createTheme } from "@mui/material/styles";
 
 const materialTheme = createTheme({
   palette: {

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 function AddProductForm() {
+  const [Admin, SetAdmin] = useState(false);
+  
+
   const [product, setProduct] = useState({
     name: "",
     description: "",
