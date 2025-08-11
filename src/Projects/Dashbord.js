@@ -1,3 +1,4 @@
+import "../Style/Style.css";
 //Dailoge=================================
 import * as React from "react";
 import Button from "@mui/material/Button";
@@ -7,11 +8,28 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import AddProductForm from "./Admin";
 
-
+// =================navbar==========
+import logo from "../Img/logo.jpg";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import MenuLinks from "./MenuLinks";
+//===============icons==================
+import MenuIcon from "@mui/icons-material/Menu";
+import { useEffect, useState } from "react";
+import { Link } from "@mui/material";
+//========================
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Tabs from "@mui/joy/Tabs";
+import TabList from "@mui/joy/TabList";
+import Tab from "@mui/joy/Tab";
+import TabPanel from "@mui/joy/TabPanel";
+//Massege===============================
+import Modal from "@mui/joy/Modal";
+import ModalClose from "@mui/joy/ModalClose";
+import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
-//Dailoge=================================
+
 export default function DashBord(params) {
   const [Admin, SetAdmin] = React.useState(false);
 
@@ -36,7 +54,7 @@ export default function DashBord(params) {
       SetAdmin(true);
     } else {
       SetAdmin(false);
-  
+
       handleClickOpen();
     }
     handleClose();
@@ -104,11 +122,235 @@ export default function DashBord(params) {
           </DialogActions>
         </Dialog>
       </React.Fragment>
-      {Admin ? <AddProductForm /> : ""}
-     
+      {Admin ? <DashBordReal /> : ""}
     </>
   );
 }
 
-/// massege
+export function DashBordReal(params) {
+  return (
+    <>
+      <Nav />
+      <div className="BodyContetnt">
+        <Tabs aria-label="Basic tabs" defaultValue={0}>
+          <TabList>
+            <Tab className="Tabs">اضافة منتج </Tab>
+            <Tab>Second tab</Tab>
+            <Tab>Third tab</Tab>
+          </TabList>
+          <TabPanel value={0}>
+            <AddNewProdact />
+          </TabPanel>
+          <TabPanel value={1}></TabPanel>
+          <TabPanel value={2}>
+            <b>Third</b> tab panel
+          </TabPanel>
+        </Tabs>
+      </div>
+    </>
+  );
+}
+//=========================================================
 
+//navbar======================================================
+function Nav(params) {
+  //state open menu
+  const [open, setopne] = useState(false);
+  function HendelOpenClice(params) {
+    if (open) {
+      setopne(false);
+    } else setopne(true);
+  }
+  useEffect(() => {
+    console.log(open);
+  });
+  return (
+    <>
+      <div className="NavBar">
+        <div className="Logo">
+          <Link height="#">
+            <Avatar alt="Og--Roots" src={logo} sx={{ width: 56, height: 56 }} />
+          </Link>
+        </div>
+
+        <Stack direction="row" spacing={2} className="Links">
+          <a href="#Hero" rel="noopener noreferrer">
+            {" "}
+            عرض الموفع
+          </a>
+          <a href="#Prodacts" rel="noopener noreferrer">
+            {" "}
+            اضافة موقع جديد
+          </a>
+          <a href="#about" rel="noopener noreferrer">
+            {" "}
+            حذف منتج
+          </a>
+        </Stack>
+        <div className="PhoneMenu">
+          <MenuIcon
+            fontSize="medium"
+            onClick={() => HendelOpenClice()}
+            style={{ color: "whitesmoke" }}
+          />
+        </div>
+        {open ? <MenuLinks /> : <></>}
+      </div>
+    </>
+  );
+}
+
+//Add Prodact
+function AddNewProdact() {
+  const [product, setProduct] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
+  const [image, setImage] = useState(null);
+  const [message, setMessage] = useState("error");
+  const [messageOpen, setMessageOpen] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProduct((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!product.name || !product.price) {
+      setMessage("الاسم والسعر مطلوبين");
+      setMessageOpen(true);
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("name", product.name);
+    formData.append("description", product.description);
+    formData.append("price", product.price);
+    if (image) formData.append("image", image);
+
+    try {
+      const res = await fetch(
+        "https://og-roots-backend.onrender.com/api/products",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage("تمت إضافة المنتج بنجاح");
+        setMessageOpen(true);
+        setProduct({ name: "", description: "", price: "" });
+        setImage(null);
+        // لتنظيف input file
+        e.target.reset();
+      } else {
+        setMessage(data.message || "حدث خطأ");
+        setMessageOpen(true);
+      }
+    } catch (error) {
+      setMessage("خطأ في الاتصال بالخادم");
+      setMessageOpen(true);
+    }
+  };
+
+  return (
+    <>
+      <div className="nav"></div>
+      <div style={{ maxWidth: 400, margin: "auto" }}>
+        <h2>OG Roots - أضف منتج جديد</h2>
+        {message && <p>{message}</p>}
+        <form onSubmit={handleSubmit} className="formDatat">
+          <div>
+            <label>اسم المنتج:</label>
+            <br />
+            <input
+              type="text"
+              name="name"
+              value={product.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label>الوصف:</label>
+            <br />
+            <textarea
+              name="description"
+              value={product.description}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>السعر:</label>
+            <br />
+            <input
+              type="number"
+              name="price"
+              value={product.price}
+              onChange={handleChange}
+              required
+              min="0"
+              step="0.01"
+            />
+          </div>
+          <div>
+            <label>صورة المنتج:</label>
+            <br />
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+          </div>
+          <button type="submit" style={{ marginTop: "10px" }}>
+            أضف المنتج
+          </button>
+        </form>
+      </div>
+      <Massege
+        state={messageOpen}
+        content={message}
+        setstate={setMessageOpen}
+      />
+    </>
+  );
+}
+
+//message
+function Massege({ state, content, setstate }) {
+  function Close() {
+    setstate(false);
+  }
+  return (
+    <React.Fragment>
+      <Modal
+        aria-labelledby="close-modal-title"
+        open={state}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      >
+        <Sheet
+          variant="outlined"
+          sx={{ minWidth: 300, borderRadius: "md", p: 3 }}
+        >
+          <ModalClose variant="outlined" onClick={() => Close()} />
+          <Typography
+            component="h2"
+            id="close-modal-title"
+            level="h4"
+            textColor="inherit"
+            sx={{ fontWeight: "lg" }}
+            color="danger"
+          >
+            {content}
+          </Typography>
+        </Sheet>
+      </Modal>
+    </React.Fragment>
+  );
+}

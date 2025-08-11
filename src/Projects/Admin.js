@@ -58,53 +58,58 @@ function AddProductForm() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: "auto" }}>
-      <h2>OG Roots - أضف منتج جديد</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>اسم المنتج:</label>
-          <br />
-          <input
-            type="text"
-            name="name"
-            value={product.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>الوصف:</label>
-          <br />
-          <textarea
-            name="description"
-            value={product.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>السعر:</label>
-          <br />
-          <input
-            type="number"
-            name="price"
-            value={product.price}
-            onChange={handleChange}
-            required
-            min="0"
-            step="0.01"
-          />
-        </div>
-        <div>
-          <label>صورة المنتج:</label>
-          <br />
-          <input type="file" accept="image/*" onChange={handleImageChange} />
-        </div>
-        <button type="submit" style={{ marginTop: "10px" }}>
-          أضف المنتج
-        </button>
-      </form>
+    <>
+    <div className="nav">
+
     </div>
+      <div style={{ maxWidth: 400, margin: "auto" }}>
+        <h2>OG Roots - أضف منتج جديد</h2>
+        {message && <p>{message}</p>}
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>اسم المنتج:</label>
+            <br />
+            <input
+              type="text"
+              name="name"
+              value={product.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div>
+            <label>الوصف:</label>
+            <br />
+            <textarea
+              name="description"
+              value={product.description}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>السعر:</label>
+            <br />
+            <input
+              type="number"
+              name="price"
+              value={product.price}
+              onChange={handleChange}
+              required
+              min="0"
+              step="0.01"
+            />
+          </div>
+          <div>
+            <label>صورة المنتج:</label>
+            <br />
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+          </div>
+          <button type="submit" style={{ marginTop: "10px" }}>
+            أضف المنتج
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 

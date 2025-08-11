@@ -3,6 +3,7 @@ import "./App.css";
 import OgRoots from "./Projects/OgRoots";
 import { Routes, Route } from "react-router-dom";
 import DashBord from "./Projects/Dashbord";
+import { DashBordReal } from "./Projects/Dashbord";
 function App() {
   return (
     <>
@@ -19,7 +20,7 @@ function App() {
           path="/admin"
           element={
             <div className="Og">
-              <DashBord />
+              <DashBordReal />
             </div>
           }
         />

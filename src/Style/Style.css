@@ -439,3 +439,34 @@ a {
   font-weight: 800 !important;
   text-align: center !important;
 }
+
+/*Dashbord Real*/
+.BodyContetnt{
+  margin-top: 100px !important;
+  width: 90% !important;
+  margin: auto ;
+background-color: red;
+}
+.ProdactsSiting{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.BtnCose{
+  background-color: burlywood !important;
+}
+.Tabs{
+  font-family: "ArabicFont" !important;
+  font-weight: 800 !important;
+  padding: 10px !important;
+}
+.formDatat{
+direction: rtl;
+
+}
+.formDatat input , textarea{
+  width: 100% !important;
+ padding: 10px !important;
+}
