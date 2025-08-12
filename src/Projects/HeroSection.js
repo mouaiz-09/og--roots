@@ -4,19 +4,13 @@ import logo from "../Img/logo.jpg";
 
 export default function HeroSection() {
   return (
-    <div
-      className="Hero"
-      id="Hero"
-      data-aos="flip-left"
-    
-    >
+    <div className="Hero" id="Hero" data-aos="flip-left">
       <div className="HeroContent">
         <div className="lOGO">
           <Avatar
             alt="Remy Sharp"
             src={logo}
             sx={{ width: 256, height: 256 }}
-         
           />
         </div>
         <div className="TextContetn">
@@ -44,9 +38,9 @@ export default function HeroSection() {
               gap: "px",
             }}
           >
-            <a href="#Prodacts" rel="noopener noreferrer">
+            <a href="https://ogroots.vercel.app/Shop" rel="noopener noreferrer">
               <Button variant="contained" className="BtnHero">
-                 أحجز قبل ما تفوتك
+                أحجز قبل ما تفوتك
               </Button>
             </a>
             <span className="Pup">"عدد محدود جداً-القطع تروح بالخف"</span>

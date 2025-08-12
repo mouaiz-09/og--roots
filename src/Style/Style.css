@@ -231,7 +231,7 @@ a {
   color: black !important;
 }
 .ImgeProdact {
-  width: 135px !important;
+  width: 90% !important;
   margin: auto;
   margin-top: 10px !important;
   border-radius: 10px !important;
@@ -259,7 +259,14 @@ a {
     font-size: 23px !important;
     font-weight: 500;
   }
+  .ImgeProdact {
+    width: 135px !important;
+    margin: auto;
+    margin-top: 10px !important;
+    border-radius: 10px !important;
+  }
 }
+
 .BtnCard {
   font-family: "ArabicFont", sans-serif !important;
   font-optical-sizing: auto;
@@ -418,7 +425,16 @@ a {
     font-size: 15px !important;
   }
 } /*shop=========================================================================================================*/
-
+@media only screen and (max-width: 768px) {
+  .Pc {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .Phones {
+    display: none !important;
+  }
+}
 /*=======AdminPage==========================================================================================*/
 .AdminPage {
   width: 100%;

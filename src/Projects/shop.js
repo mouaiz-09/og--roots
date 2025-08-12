@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Grid } from "@mui/material";
 import CaedSHop from "./CardSHop";
 import NavBar from "./NavBar";
+import CardProdact from "./CardProdact";
 
 export default function Shop() {
   document.title = "المتجر";
@@ -24,8 +25,8 @@ export default function Shop() {
               <h1>منتجاتنا</h1>
             </div>
             <div className="Bodya">
-              {/*==================Grid ============== */}
-              <Box>
+              {/*==================Grid  phones============== */}
+              <Box className="Phones">
                 <Grid
                   flexWrap={{ xs: "wrap", sm: "wrap", md: "nowrap" }}
                   container
@@ -43,7 +44,22 @@ export default function Shop() {
                   ))}
                 </Grid>
               </Box>
-              {/*==================Grid ============== */}
+              {/*==================Grid  Phones ============== */}
+              {/*==================Grid Pc ============== */}
+              <Box className="Pc" sx={{ flexGrow: 1, p: 1 }}>
+                <Grid container spacing={2}>
+                  {products.map((product) => (
+                    <Grid item size={{ xs: 6, md: 4 }} key={product._id}>
+                      <CardProdact
+                        Titel={product.name}
+                        prace={`${product.price} DA`}
+                        src={product.imageUrl}
+                      ></CardProdact>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+              {/*==================Grid  Pc============== */}
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import { Link } from "@mui/material";
 //========================
-import ButtonGroup from "@mui/material/ButtonGroup";
+
 import Tabs from "@mui/joy/Tabs";
 import TabList from "@mui/joy/TabList";
 import Tab from "@mui/joy/Tab";
@@ -30,6 +30,15 @@ import ModalClose from "@mui/joy/ModalClose";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
 
+// delet  section =====================================================
+
+import Box from "@mui/material/Box";
+
+import Grid from "@mui/material/Grid";
+
+//=============
+import "../Style/Style.css";
+import CardDelet from "./CardDelet";
 export default function DashBord(params) {
   const [Admin, SetAdmin] = React.useState(false);
 
@@ -134,16 +143,18 @@ export function DashBordReal(params) {
       <div className="BodyContetnt">
         <Tabs aria-label="Basic tabs" defaultValue={0}>
           <TabList>
-            <Tab className="Tabs">اضافة منتج </Tab>
-            <Tab>Second tab</Tab>
-            <Tab>Third tab</Tab>
+            <Tab className="Tabs" color="success">
+              اضافة منتج{" "}
+            </Tab>
+            <Tab className="Tabs" color="danger">
+              حذف منتج
+            </Tab>
           </TabList>
           <TabPanel value={0}>
             <AddNewProdact />
           </TabPanel>
-          <TabPanel value={1}></TabPanel>
-          <TabPanel value={2}>
-            <b>Third</b> tab panel
+          <TabPanel value={1} color="danger">
+            <Proadctsshow />
           </TabPanel>
         </Tabs>
       </div>
@@ -200,7 +211,7 @@ function Nav(params) {
   );
 }
 
-//Add Prodact
+//Add Prodact======================================================================================================
 function AddNewProdact() {
   const [product, setProduct] = useState({
     name: "",
@@ -268,7 +279,6 @@ function AddNewProdact() {
       <div className="nav"></div>
       <div style={{ maxWidth: 400, margin: "auto" }}>
         <h2>OG Roots - أضف منتج جديد</h2>
-        {message && <p>{message}</p>}
         <form onSubmit={handleSubmit} className="formDatat">
           <div>
             <label>اسم المنتج:</label>
@@ -281,15 +291,7 @@ function AddNewProdact() {
               required
             />
           </div>
-          <div>
-            <label>الوصف:</label>
-            <br />
-            <textarea
-              name="description"
-              value={product.description}
-              onChange={handleChange}
-            />
-          </div>
+
           <div>
             <label>السعر:</label>
             <br />
@@ -308,9 +310,15 @@ function AddNewProdact() {
             <br />
             <input type="file" accept="image/*" onChange={handleImageChange} />
           </div>
-          <button type="submit" style={{ marginTop: "10px" }}>
+          <Button
+            type="submit"
+            color="success"
+            variant="contained"
+            fullWidth
+            style={{ marginTop: "10px" }}
+          >
             أضف المنتج
-          </button>
+          </Button>
         </form>
       </div>
       <Massege
@@ -322,7 +330,7 @@ function AddNewProdact() {
   );
 }
 
-//message
+//message=========================================================
 function Massege({ state, content, setstate }) {
   function Close() {
     setstate(false);
@@ -352,5 +360,49 @@ function Massege({ state, content, setstate }) {
         </Sheet>
       </Modal>
     </React.Fragment>
+  );
+}
+
+//delet Prodacte =================///======================***************************************
+//grid======================
+
+export function Proadctsshow(params) {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://og-roots-backend.onrender.com/api/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("خطأ في جلب المنتجات:", err));
+  }, []);
+  const handleDeleteProduct = (id) => {
+    setProducts(products.filter((p) => p._id !== id));
+  };
+
+  return (
+    <div>
+      {/*==================Grid ============== */}
+      <Box className="Phones">
+        <Grid
+          flexWrap={{ xs: "wrap", sm: "wrap", md: "nowrap" }}
+          container
+          padding={{ xs: 1, sm: 2, md: 3 }}
+          spacing={{ xs: 1, sm: 2, md: 3 }} // gap صغير في الهاتف، أكبر في التابلت، أكبر في الحاسوب
+        >
+          {products.map((product) => (
+            <Grid item xs={6} md={4} key={product._id} width="100%">
+              <CardDelet
+                onDelete={handleDeleteProduct}
+                Titel={product.name}
+                prace={`${product.price} DA`}
+                src={product.imageUrl}
+                product={product}
+              ></CardDelet>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/*==================Grid ============== */}
+    </div>
   );
 }
