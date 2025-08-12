@@ -16,19 +16,32 @@ export default function HeroSection() {
         <div className="TextContetn">
           <div
             style={{
-              textAlign: "start",
-              width: "100%",
-              direction: "rtl",
+              padding: "0",
+              display: "flex",
+              gap: "2px",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
             }}
+            className="TextHero"
           >
-            <h1 className="Titel">
-              <span className="NameOfBrand">OG--Roots </span>
-              مرحبا بيك في
-            </h1>
+            <h2
+              className="Titel"
+              style={{
+                direction: "ltr",
+                display: "flex",
+                gap: "2px",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "0px",
+                margin: "0px",
+              }}
+            >
+              {" "}
+              <span className="NameOfBrand"> Og-Roots </span> مرحبا بيك في
+            </h2>
+            <h4 className="Description">مغلطتش كي خيرتنا</h4>
           </div>
-          <p className="Description" dir="rtl">
-            مغلطتش كي خيرتنا
-          </p>
           <div
             style={{
               display: "flex",
@@ -40,7 +53,7 @@ export default function HeroSection() {
           >
             <a href="https://ogroots.vercel.app/Shop" rel="noopener noreferrer">
               <Button variant="contained" className="BtnHero">
-                أحجز قبل ما تفوتك
+                زيارة المتجر
               </Button>
             </a>
             <span className="Pup">"عدد محدود جداً-القطع تروح بالخف"</span>

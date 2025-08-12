@@ -1,9 +1,5 @@
 .Og {
   width: 100%;
-  background-image: url("../Img/Phoneackground.png") !important;
-  background-repeat: repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
 }
 @font-face {
   font-family: ArabicFont;
@@ -132,12 +128,6 @@ a {
   flex-direction: column;
   padding: 30px;
 }
-.Titel {
-  font-weight: 800 !important;
-  font-size: 55px;
-  direction: ltr;
-  text-align: end !important;
-}
 
 .NameOfBrand {
   font-family: "FranchFont", cursive;
@@ -163,15 +153,6 @@ a {
   margin-top: 15px !important;
 }
 
-.Description {
-  font-family: "ArabicFont", sans-serif !important;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-  font-style: normal;
-  padding: 0 !important;
-  margin: 0 !important;
-}
 .Pup {
   color: rgb(235, 6, 6);
   font-size: 12px;
@@ -192,6 +173,7 @@ a {
   .NameOfBrand {
     font-size: large !important;
     font-weight: 800 !important;
+    font-size: 25px !important;
   }
   .HeroContent {
     flex-direction: column !important;
@@ -200,10 +182,27 @@ a {
     margin-top: 100px !important;
   }
   .Titel {
-    font-size: 35px !important;
     width: 100%;
     font-family: "ArabicFont" !important;
+    font-weight: 900;
+    font-size: 27px !important;
   }
+  .Description {
+    font-family: "ArabicFont" !important;
+    font-weight: 400;
+    font-size: 17px !important;
+  }
+}
+.Titel {
+  width: 100%;
+  font-family: "ArabicFont" !important;
+  font-weight: 900;
+  font-size: 57px;
+}
+.Description {
+  font-family: "ArabicFont" !important;
+  font-weight: 400;
+  font-size: 30px;
 }
 /*Prodacts==============================*/
 .Prodacts {
