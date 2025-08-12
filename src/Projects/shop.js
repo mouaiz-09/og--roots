@@ -4,6 +4,7 @@ import CaedSHop from "./CardSHop";
 import NavBar from "./NavBar";
 
 export default function Shop() {
+  document.title = "المتجر";
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function Shop() {
       <div className="BodyShop">
         <div className="Prodacts" id="Prodacts">
           <div className="ProdactsContanet">
-            <div className="Top" style={{ marginTop: "100px" }}>
+            <div className="Top" style={{ marginTop: "50px" }}>
               <h1>منتجاتنا</h1>
             </div>
             <div className="Bodya">
