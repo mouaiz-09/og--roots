@@ -14,7 +14,7 @@ export default function MenuLinks() {
     SetStatue(Vlue);
   }
   const buttons = [
-    <a href="#Hero" rel="noopener noreferrer">
+    <a href="https://ogroots.vercel.app/#Hero" rel="noopener noreferrer">
       {" "}
       <Button
         className="BtnLink"
@@ -30,7 +30,7 @@ export default function MenuLinks() {
         الصفحة الرئيسة
       </Button>
     </a>,
-    <a href="#Prodacts" rel="noopener noreferrer">
+    <a href="https://ogroots.vercel.app/Shop" rel="noopener noreferrer">
       <Button
         className="BtnLink"
         sx={{
@@ -42,10 +42,10 @@ export default function MenuLinks() {
         style={{ fontFamily: "Alexandria" }}
         key="two"
       >
-        المنتجات
+        المتجر
       </Button>
     </a>,
-    <a href="#about" rel="noopener noreferrer">
+    <a href="https://ogroots.vercel.app/#about" rel="noopener noreferrer">
       <Button
         className="BtnLink"
         sx={{
@@ -60,7 +60,7 @@ export default function MenuLinks() {
         نحن
       </Button>
     </a>,
-    <a href="#contacte" rel="noopener noreferrer">
+    <a href="https://ogroots.vercel.app/#contacte" rel="noopener noreferrer">
       <Button
         className="BtnLink"
         sx={{
@@ -87,11 +87,10 @@ export default function MenuLinks() {
           m: 1,
           width: 138,
           height: 110,
-         
         },
       }}
     >
-      <Paper >
+      <Paper>
         <ButtonGroup
           fullWidth
           orientation="vertical"

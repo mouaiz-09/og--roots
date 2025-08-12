@@ -21,25 +21,28 @@ export default function NavBar(params) {
   return (
     <div className="NavBar">
       <div className="Logo">
-        <Link height="#" >
+        <Link height="#">
           <Avatar alt="Og--Roots" src={logo} sx={{ width: 56, height: 56 }} />
         </Link>
       </div>
 
       <Stack direction="row" spacing={2} className="Links">
-        <a href="#Hero" rel="noopener noreferrer">
+        <a href="https://ogroots.vercel.app/" rel="noopener noreferrer">
           {" "}
           الصفحة الرئيسة
         </a>
-        <a href="#Prodacts"  rel="noopener noreferrer">
+        <a href="https://ogroots.vercel.app/Shop" rel="noopener noreferrer">
           {" "}
-          المنتجات
+          المتجر
         </a>
-        <a href="#about"  rel="noopener noreferrer">
+        <a href="https://ogroots.vercel.app/#about" rel="noopener noreferrer">
           {" "}
           نحن
         </a>
-        <a href="#contacte" rel="noopener noreferrer">
+        <a
+          href="https://ogroots.vercel.app/#contacte"
+          rel="noopener noreferrer"
+        >
           {" "}
           تواصل معنا
         </a>

@@ -3,7 +3,8 @@ import "./App.css";
 import OgRoots from "./Projects/OgRoots";
 import { Routes, Route } from "react-router-dom";
 import DashBord from "./Projects/Dashbord";
-import { DashBordReal } from "./Projects/Dashbord";
+
+import Shop from "./Projects/shop";
 function App() {
   return (
     <>
@@ -20,7 +21,15 @@ function App() {
           path="/admin"
           element={
             <div className="Og">
-              <DashBordReal />
+              <DashBord />
+            </div>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <div className="Og">
+              <Shop />
             </div>
           }
         />

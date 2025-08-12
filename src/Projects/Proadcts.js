@@ -2,15 +2,23 @@
 import * as React from "react";
 
 import Box from "@mui/material/Box";
-
+import { useState, useEffect } from "react";
 import Grid from "@mui/material/Grid";
-import CardProdact from "./CardProdact"
+import CardProdact from "./CardProdact";
 
 //=============
 import "../Style/Style.css";
 
-
 export default function Proadcts(params) {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://og-roots-backend.onrender.com/api/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("خطأ في جلب المنتجات:", err));
+  }, []);
+
   return (
     <div className="Prodacts" id="Prodacts">
       <div className="ProdactsContanet">
@@ -21,9 +29,13 @@ export default function Proadcts(params) {
           {/*==================Grid ============== */}
           <Box sx={{ flexGrow: 1, p: 1 }}>
             <Grid container spacing={2}>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <Grid item size={{ xs: 6, md: 4 }} key={index}>
-                  <CardProdact Titel={"Techert"} prace="250Da"></CardProdact>
+              {products.map((product) => (
+                <Grid item size={{ xs: 6, md: 4 }} key={product._id}>
+                  <CardProdact
+                    Titel={product.name}
+                    prace={`${product.price} DA`}
+                    src={product.imageUrl}
+                  ></CardProdact>
                 </Grid>
               ))}
             </Grid>

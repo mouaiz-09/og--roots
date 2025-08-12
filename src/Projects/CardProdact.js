@@ -13,12 +13,17 @@ export default function CardProdact({
   prace = "404",
   src = "https://m.media-amazon.com/images/I/719aat+IRzS._AC_SL1500_.jpg",
 }) {
-
   const phone = "213562260041";
   const message = "og--roots slam"; // الرسالة الجاهزة
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   return (
-    <Card sx={{ maxWidth: 345, textAlign: "center", background: "burlywood" }}>
+    <Card
+      sx={{
+        textAlign: "center",
+        background: "burlywood",
+        height: "100%",
+      }}
+    >
       <CardMedia
         component="img"
         alt={Titel}

@@ -231,8 +231,8 @@ a {
   color: black !important;
 }
 .ImgeProdact {
-  width: 110px !important;
-  margin: auto !important;
+  width: 135px !important;
+  margin: auto;
   margin-top: 10px !important;
   border-radius: 10px !important;
 }
@@ -404,7 +404,8 @@ a {
   background-color: burlywood !important;
 }
 .btngroupa {
-  background-color: burlywood !important;.TitelLogonIn input::placeholder{
+  background-color: burlywood !important;
+  .TitelLogonIn input::placeholder {
     font-size: 30px !important;
   }
 }
@@ -416,9 +417,9 @@ a {
   .Bt .BtnCard {
     font-size: 15px !important;
   }
-}
+} /*shop=========================================================================================================*/
 
-/*=======AdminPage============*/
+/*=======AdminPage==========================================================================================*/
 .AdminPage {
   width: 100%;
   height: 100vh;
@@ -440,33 +441,32 @@ a {
   text-align: center !important;
 }
 
-/*Dashbord Real*/
-.BodyContetnt{
+/*Dashbord Real==================================================================================================*/
+.BodyContetnt {
   margin-top: 100px !important;
   width: 90% !important;
-  margin: auto ;
-background-color: red;
+  margin: auto;
+  background-color: red;
 }
-.ProdactsSiting{
+.ProdactsSiting {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.BtnCose{
+.BtnCose {
   background-color: burlywood !important;
 }
-.Tabs{
+.Tabs {
   font-family: "ArabicFont" !important;
   font-weight: 800 !important;
   padding: 10px !important;
 }
-.formDatat{
-direction: rtl;
-
+.formDatat {
+  direction: rtl;
 }
-.formDatat input , textarea{
+.formDatat input,
+textarea {
   width: 100% !important;
- padding: 10px !important;
+  padding: 10px !important;
 }
