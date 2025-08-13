@@ -235,7 +235,27 @@ function AddNewProdact() {
     e.preventDefault();
 
     if (!product.name || !product.price) {
-      setMessage("الاسم والسعر مطلوبين");
+      setMessage("❌ الاسم والسعر مطلوبين");
+      setMessageOpen(true);
+      return;
+    }
+
+    if (!image) {
+      setMessage("❌ الرجاء اختيار صورة للمنتج");
+      setMessageOpen(true);
+      return;
+    }
+
+    // تحقق من نوع الصورة
+    if (!["image/jpeg", "image/png", "image/webp"].includes(image.type)) {
+      setMessage("❌ صيغة الصورة غير مدعومة (اختر JPEG أو PNG أو WebP)");
+      setMessageOpen(true);
+      return;
+    }
+
+    // تحقق من حجم الصورة (مثلاً أقل من 5 ميغابايت)
+    if (image.size > 5 * 1024 * 1024) {
+      setMessage("❌ حجم الصورة كبير جدًا (الحد الأقصى 5MB)");
       setMessageOpen(true);
       return;
     }
@@ -244,7 +264,7 @@ function AddNewProdact() {
     formData.append("name", product.name);
     formData.append("description", product.description);
     formData.append("price", product.price);
-    if (image) formData.append("image", image);
+    formData.append("image", image);
 
     try {
       const res = await fetch(
@@ -258,18 +278,17 @@ function AddNewProdact() {
       const data = await res.json();
 
       if (res.ok) {
-        setMessage("تمت إضافة المنتج بنجاح");
+        setMessage("✅ تمت إضافة المنتج بنجاح");
         setMessageOpen(true);
         setProduct({ name: "", description: "", price: "" });
         setImage(null);
-        // لتنظيف input file
         e.target.reset();
       } else {
-        setMessage(data.message || "حدث خطأ");
+        setMessage(`❌ ${data.message || "حدث خطأ أثناء الإضافة"}`);
         setMessageOpen(true);
       }
     } catch (error) {
-      setMessage("خطأ في الاتصال بالخادم");
+      setMessage("❌ خطأ في الاتصال بالخادم");
       setMessageOpen(true);
     }
   };
