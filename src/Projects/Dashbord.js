@@ -268,7 +268,7 @@ function AddNewProdact() {
 
     try {
       const res = await fetch(
-        "https://og-roots-backend.onrender.com/api/products",
+        "https://required-zea-bashacode-671ff1dd.koyeb.app/api/products",
         {
           method: "POST",
           body: formData,
@@ -389,7 +389,7 @@ export function Proadctsshow(params) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://og-roots-backend.onrender.com/api/products")
+    fetch("https://required-zea-bashacode-671ff1dd.koyeb.app/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("خطأ في جلب المنتجات:", err));

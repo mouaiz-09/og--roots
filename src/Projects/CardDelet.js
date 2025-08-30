@@ -18,7 +18,7 @@ export default function CardDelet({
   const handleDelete = async () => {
     try {
       const res = await fetch(
-        `https://og-roots-backend.onrender.com/delete/${product._id}`,
+        `https://required-zea-bashacode-671ff1dd.koyeb.app/delete/${product._id}`,
         {
           method: "DELETE",
         }
